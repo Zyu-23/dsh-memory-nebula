@@ -1,0 +1,67 @@
+{
+  "name": "dsh-memory-nebula",
+  "version": "0.1.0",
+  "description": "记忆星云：把 DeepSeek Harness 的记忆画成一张会呼吸的力导向星云图，并接管记忆 / 人格 / 状态",
+  "type": "module",
+  "license": "MIT",
+  "author": "dsh-memory-nebula contributors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zyu-23/dsh-memory-nebula.git"
+  },
+  "homepage": "https://github.com/Zyu-23/dsh-memory-nebula",
+  "bugs": {
+    "url": "https://github.com/Zyu-23/dsh-memory-nebula/issues"
+  },
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "defaults",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.2 <5.0.0",
+    "@deepseek-ai/dsh-home-paths": ">=0.1.5-rc.2 <0.3.0",
+    "@deepseek-ai/dsh-llm": ">=0.1.5-rc.2 <0.3.0",
+    "@deepseek-ai/dsh-tools": ">=0.1.5-rc.2 <0.3.0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": { "optional": true }
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "memory",
+    "memory-visualization",
+    "nebula",
+    "knowledge-graph",
+    "persona"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "note": "实体关系数据源（默认空白——插件只提供框架，内容由你自己写入）。用法：memory_write 写记忆 → nebula_extract 抽取实体 → 刷新星云图，节点就长出来了。",
+  "entities": [],
+  "edges": [],
+  "memoryEntities": { "host": {}, "qq": {} }
+}

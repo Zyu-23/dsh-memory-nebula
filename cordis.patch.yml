@@ -1,0 +1,10 @@
+# dsh-memory-nebula bundle patch
+#
+# 这个文件是 `dsh.bundle.patch` 层：装成 bundle 时，启动器会把它当成
+# 一个配置层合并，等价于在 profile 的 cordis.patch.yml 里手写下面这条 insert。
+#
+# 同一个插件文件不能被 insert 两次（双实例注册会冲突），所以要么走 bundle，
+# 要么走 profile 手写，不要两边都挂。
+- insert:
+    - id: memory-nebula
+      name: 'dsh-memory-nebula'
